@@ -12,9 +12,6 @@ const ProductList = () => {
 
   const [itemSelected, setItemSelected] = useState(null);
   const handleSelectItem = (item) => {
-    //item se la cai gia tri nhan tu component con truyen ra cha
-    //xong luu cai item da select
-    //roi pass prop qua ben modal
     setItemSelected(item);
     openModal();
   };
@@ -26,8 +23,7 @@ const ProductList = () => {
   };
   const localCart = JSON.stringify(cart);
   localStorage.setItem("Item", localCart);
-  // may phai de cai xu ly o ben ngoai roi truyen function vao trong
-  // thay ham selectItem khong
+
   return (
     <>
       <div className="product-list-container">

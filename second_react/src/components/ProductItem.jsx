@@ -1,12 +1,24 @@
-import React from "react";
 import "../assets/style/style.css";
-function ProductItem(item) {
+
+const ProductItem = (newProps) => {
+  const { item, onSelect } = newProps;
   const { img, name, price, discount, chip, sizeScreen, ram, rom } = item;
-  let newPrice = parseInt(price) * (1 - discount / 100);
+  let newPrice = parseInt(price) * (1 - parseInt(discount) / 100);
+
+  //doi no thanh state
+  //cart luu gi click vao cai nay thi no add vao cart
+  //do hhmm lai
+
   return (
     <div className="product-item">
       <div className="product-image-container">
-        <img src={img} alt={name} title={name} className="product-img" />
+        <img
+          src={img}
+          alt={name}
+          title={name}
+          className="product-img"
+          onClick={() => onSelect(item)} // truyen vao nhu the
+        />
       </div>
       <div className="product-info">
         <p className="product-name">{name}</p>
@@ -22,10 +34,8 @@ function ProductItem(item) {
           <span className="price">
             {price.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.")}
           </span>
-
           <span className="discount">{discount.concat("%")}</span>
         </p>
-
         <p className="product-chip">Chipset: {chip}</p>
         <p className="product-sizeScreen">Kích thước màn hình: {sizeScreen}</p>
         <p className="product-ram">Ram: {ram}</p>
@@ -36,7 +46,10 @@ function ProductItem(item) {
           Thêm vào so sánh
         </a>
       </div>
+      <button className="show-detail-button" onClick={() => onSelect(item)}>
+        Show detail
+      </button>
     </div>
   );
-}
+};
 export default ProductItem;

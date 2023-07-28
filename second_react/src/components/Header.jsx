@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/style/style.css";
 import CartIcon from "../assets/images/header-icon/cart.png";
 import SearchIcon from "../assets/images/header-icon/search.png";
@@ -7,7 +7,14 @@ import Logo from "../assets/images/logo.png";
 import OrderTrackingIcon from "../assets/images/header-icon/order-tracking.png";
 import UserIcon from "../assets/images/header-icon/user.png";
 import HotlineIcon from "../assets/images/header-icon/hotline.png";
-export default function header() {
+import Cart from "./Cart";
+export default function Header() {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((showModal) => !showModal);
+  };
+
   return (
     <div className="header">
       <div className="header-item trademark ">
@@ -43,7 +50,8 @@ export default function header() {
         <div className="icon-container">
           <img src={CartIcon} alt="" />
         </div>
-        <p>Giỏ hàng</p>
+        <p onClick={openModal}>Giỏ hàng</p>
+        <span> {showModal && <Cart openModal={openModal} />}</span>
       </div>
       <div className="header-item order-lookup">
         <div className="icon-container">

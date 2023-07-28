@@ -13,7 +13,7 @@ const ProductItem = (newProps) => {
           alt={name}
           title={name}
           className="product-img"
-          onClick={() => onSelect(item)}
+          onClick={() => onSelect(item)} // truyen vao nhu the
         />
       </div>
       <div className="product-info">

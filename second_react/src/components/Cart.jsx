@@ -1,6 +1,6 @@
 import ModalCart from "./Modal/ModalCart";
 import "../assets/style/style.css";
-// import ModalCart from "./Modal/ModalCart";
+
 function Cart(newProps) {
   const { openModal } = newProps;
   const cart = JSON.parse(localStorage.getItem("Item"));

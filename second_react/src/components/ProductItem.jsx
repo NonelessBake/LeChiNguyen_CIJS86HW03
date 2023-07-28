@@ -5,10 +5,6 @@ const ProductItem = (newProps) => {
   const { img, name, price, discount, chip, sizeScreen, ram, rom } = item;
   let newPrice = parseInt(price) * (1 - parseInt(discount) / 100);
 
-  //doi no thanh state
-  //cart luu gi click vao cai nay thi no add vao cart
-  //do hhmm lai
-
   return (
     <div className="product-item">
       <div className="product-image-container">
@@ -17,7 +13,7 @@ const ProductItem = (newProps) => {
           alt={name}
           title={name}
           className="product-img"
-          onClick={() => onSelect(item)} // truyen vao nhu the
+          onClick={() => onSelect(item)}
         />
       </div>
       <div className="product-info">

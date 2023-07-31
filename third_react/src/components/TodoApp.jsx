@@ -62,8 +62,6 @@ function TodoApp() {
   };
 
   const onDelete = (id) => {
-    let index = todos.findIndex((item) => item.id === id);
-    todos[index].status = Status.Deleted;
     setTodos((prev) => prev.filter((item) => item.id !== id));
   };
 

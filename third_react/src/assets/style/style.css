@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background-color: rgba(78, 57, 24, 0.8);
+  padding-top: 50px;
+}
+a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+#tittle {
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.enter-task-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+#enter-task {
+  width: 100%;
+  padding: 8px 20px;
+  border: 1px solid black;
+}
+
+.form-container {
+  padding: 40px 20px;
+  margin: 0 auto;
+  width: 500px;
+  background-color: rgb(167, 67, 67);
+}
+
+#task-actions-container {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.select-status {
+  border: 1px solid rgba(100, 40, 40, 0.3);
+  padding: 10px;
+  background-color: rgba(100, 40, 40, 0.3);
+  cursor: pointer;
+  transition: border 0.2s;
+  transition: color 0.2s;
+  transition: ease-in-out 0.1s;
+}
+
+.select-status:hover {
+  border: 1px solid white;
+  color: white;
+}
+.select-status:active {
+  background-color: rgb(141, 218, 218);
+}
+
+.add-task,
+.delete-task {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: ease-in-out 0.15s;
+}
+
+.add-task:hover,
+.delete-task:hover {
+  background-color: wheat;
+  color: black;
+}
+
+.add-task:active,
+.delete-task:active {
+  background-color: yellow;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.task-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-task {
+  padding: 5px 20px;
+  background-color: white;
+  color: black;
+}
+
+.check-task {
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  background: white;
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.15s;
+}
+
+.check-task:hover {
+  background-color: rgba(42, 42, 238, 0.8);
+}
+
+.check-task:active {
+  opacity: 0.5;
+}

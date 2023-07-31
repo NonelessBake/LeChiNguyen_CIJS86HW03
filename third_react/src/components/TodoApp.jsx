@@ -25,6 +25,8 @@ function TodoApp() {
     { id: Math.random(), taskName: "Git Bash", status: Status.Active },
     { id: Math.random(), taskName: "CSS", status: Status.Active },
     { id: Math.random(), taskName: "Java", status: Status.Active },
+    { id: Math.random(), taskName: "TypeScript", status: Status.Active },
+    { id: Math.random(), taskName: "Python", status: Status.Active },
   ]);
 
   const onAddNewTask = () => {

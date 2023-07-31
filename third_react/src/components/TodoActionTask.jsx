@@ -8,7 +8,9 @@ function TodoActionTask(newProps) {
         <li
           id="show-all"
           className="select-status"
-          onClick={() => onChangeStatus(Status.All)}
+          onClick={() => {
+            onChangeStatus(Status.All);
+          }}
         >
           All
         </li>

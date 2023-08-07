@@ -1,5 +1,6 @@
 const hotTrend = [
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-tim-1.jpg",
     name: "iPhone 14 Pro Max 128GB Tím",
     price: "26790000đ",
@@ -10,6 +11,7 @@ const hotTrend = [
     rom: "12",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-vang-1.jpg",
     name: "iPhone 14 Pro Max 128GB Vàng",
     price: "26790000đ",
@@ -20,6 +22,7 @@ const hotTrend = [
     rom: "128",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/827/10053257-dien-thoai-samsung-galaxy-a04s-4gb-64gb-xanh-1.jpg",
     name: "Samsung Galaxy A04s 4GB/64GB Xanh",
     price: "2990000đ",
@@ -30,6 +33,7 @@ const hotTrend = [
     rom: "64",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/832/10053536-dien-thoai-oppo-a77s-8gb-128gb-xanh-1.jpg",
     name: "Điện thoại OPPO A77s 8GB/128GB Xanh",
     price: "5490000đ",
@@ -40,6 +44,7 @@ const hotTrend = [
     rom: "128",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/856/10054597-dien-thoai-samsung-galaxy-a14-5g-4gb-128gb-do-1.jpg",
     name: "Samsung Galaxy A14 5G 4GB/128GB Đỏ",
     price: "3990000đ",
@@ -53,6 +58,7 @@ const hotTrend = [
 
 const allProduct = [
   {
+    installmentFee: 0,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-tim-1.jpg",
     name: "iPhone 14 Pro Max 128GB Tím",
     price: "26790000đ",
@@ -63,6 +69,7 @@ const allProduct = [
     rom: "12",
   },
   {
+    installmentFee: 0,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/834/10053681-dien-thoai-samsung-galaxy-a04-3gb-32gb-den-1.jpg",
     name: "Samsung Galaxy A04 3GB/32GB Đen",
     price: "2090000đ",
@@ -73,6 +80,7 @@ const allProduct = [
     rom: "12",
   },
   {
+    installmentFee: 0,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-tim-1.jpg",
     name: "iPhone 14 Pro Max 128GB Tím",
     price: "26790000đ",
@@ -83,6 +91,7 @@ const allProduct = [
     rom: "12",
   },
   {
+    installmentFee: 0,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/product/829/dien-thoai-iphone-14-pro-max-128gb-vang-1.jpg",
     name: "iPhone 14 Pro Max 128GB Vàng",
     price: "26790000đ",
@@ -93,6 +102,7 @@ const allProduct = [
     rom: "128",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/856/10054629-dien-thoai-samsung-galaxy-a14-5g-4gb-128gb-bac-1.jpg",
     name: "Samsung Galaxy A14 5G 4GB/128GB Bạc",
     price: "3.990.000đ",
@@ -104,6 +114,7 @@ const allProduct = [
   },
 
   {
+    installmentFee: 0,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/827/10053257-dien-thoai-samsung-galaxy-a04s-4gb-64gb-xanh-1.jpg",
     name: "Samsung Galaxy A04s 4GB/64GB Xanh",
     price: "2990000đ",
@@ -114,6 +125,7 @@ const allProduct = [
     rom: "64",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/827/10053348-dien-thoai-samsung-galaxy-a04s-4gb-64gb-den-1.jpg",
     name: "Samsung Galaxy A04s 4GB/64GB Đen",
     price: "2.990.000đ",
@@ -124,6 +136,7 @@ const allProduct = [
     rom: "12",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/832/10053536-dien-thoai-oppo-a77s-8gb-128gb-xanh-1.jpg",
     name: "Điện thoại OPPO A77s 8GB/128GB Xanh",
     price: "5490000đ",
@@ -134,6 +147,7 @@ const allProduct = [
     rom: "128",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/821/10053177-dien-thoai-nokia-8210-4g-trang-1.jpg",
     name: "Nokia 8210 4G Trắng",
     price: "1.490.000đ",
@@ -144,6 +158,7 @@ const allProduct = [
     rom: "1",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/856/10054597-dien-thoai-samsung-galaxy-a14-5g-4gb-128gb-do-1.jpg",
     name: "Samsung Galaxy A14 5G 4GB/128GB Đỏ",
     price: "3990000đ",
@@ -157,30 +172,35 @@ const allProduct = [
 
 const productForU = [
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/856/10054629-dien-thoai-samsung-galaxy-a14-5g-4gb-128gb-bac-1.jpg",
     name: "Samsung Galaxy A14 5G 4GB/128GB Bạc",
     price: "3990000đ",
     discount: "23",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/821/10053177-dien-thoai-nokia-8210-4g-trang-1.jpg",
     name: "Nokia 8210 4G Trắng",
     price: "1490000đ",
     discount: "12",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/856/10054597-dien-thoai-samsung-galaxy-a14-5g-4gb-128gb-do-1.jpg",
     name: "Samsung Galaxy A14 5G 4GB/128GB Đỏ",
     price: "3990000đ",
     discount: "23",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/834/10053681-dien-thoai-samsung-galaxy-a04-3gb-32gb-den-1.jpg",
     name: "Samsung Galaxy A04 3GB/32GB Đen",
     price: "2090000đ",
     discount: "20",
   },
   {
+    installmentFee: 10,
     img: "https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/856/10054629-dien-thoai-samsung-galaxy-a14-5g-4gb-128gb-bac-1.jpg",
     name: "Samsung Galaxy A14 5G 4GB/128GB Bạc",
     price: "3.990.000đ",

@@ -2,11 +2,24 @@ import "../assets/style/style.css";
 
 const ProductItem = (newProps) => {
   const { item, onSelect } = newProps;
-  const { img, name, price, discount, chip, sizeScreen, ram, rom } = item;
+  const {
+    img,
+    name,
+    price,
+    discount,
+    chip,
+    sizeScreen,
+    ram,
+    rom,
+    installmentFee,
+  } = item;
   let newPrice = parseInt(price) * (1 - parseInt(discount) / 100);
 
   return (
     <div className="product-item">
+      {installmentFee === 0 && (
+        <span className="installment-fee">Trả góp: {installmentFee}%</span>
+      )}
       <div className="product-image-container">
         <img
           src={img}

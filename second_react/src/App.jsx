@@ -1,5 +1,5 @@
 import "./App.css";
-import Header from "./components/header";
+import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Banner from "./components/Banner";
 import ProductList from "./components/ProductList";

@@ -3,7 +3,6 @@ import "../assets/style/style.css";
 import TodoActionTask from "./TodoActionTask";
 import TodoInputTask from "./TodoInputTask";
 import TodoTaskList from "./TodoTaskList";
-
 function TodoApp() {
   const [todoList, setTodoList] = useState([
     { id: crypto.randomUUID(), taskName: "JavaScript", completed: false },
@@ -61,9 +60,11 @@ function TodoApp() {
           onChangeHandler={onChangeHandler}
         />
         <TodoActionTask
+          status={status}
           onAddNewTask={onAddNewTask}
           onChangeStatus={onChangeStatus}
         />
+
         <TodoTaskList
           todoList={
             status !== "all"

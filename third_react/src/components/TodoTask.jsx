@@ -1,22 +1,21 @@
 function TodoTask(newProps) {
   const { task, onCompleted, onDelete } = newProps;
+  const { id, taskName, completed } = task;
   return (
     <>
       <li className="task">
         <div className="task-container">
           <input
             id="check"
-            checked={task.completed}
+            checked={completed}
             type="checkbox"
-            onChange={(e) => onCompleted(task.id, e.target.checked)}
+            onChange={(e) => {
+              onCompleted(id, e.target.checked);
+            }}
           />
-          <span className="name-task">{task.taskName}</span>
+          <span className="name-task">{taskName}</span>
         </div>
-        <button
-          className="delete-task"
-          type="button"
-          onClick={() => onDelete(task.id)}
-        >
+        <button className="delete-task" onClick={() => onDelete(id)}>
           Delete
         </button>
       </li>

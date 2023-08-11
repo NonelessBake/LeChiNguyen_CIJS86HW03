@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import "../assets/style/style.css";
 import TodoActionTask from "./TodoActionTask";
 import TodoInputTask from "./TodoInputTask";
 import TodoTaskList from "./TodoTaskList";
+export const TaskContext = createContext();
 function TodoApp() {
   const [todoList, setTodoList] = useState([
     { id: crypto.randomUUID(), taskName: "JavaScript", completed: false },
@@ -64,18 +65,17 @@ function TodoApp() {
           onAddNewTask={onAddNewTask}
           onChangeStatus={onChangeStatus}
         />
-
-        <TodoTaskList
-          todoList={
-            status !== "all"
-              ? status === "active"
-                ? todoList.filter((task) => task.completed === false)
-                : todoList.filter((task) => task.completed === true)
-              : todoList
-          }
-          onCompleted={onCompleted}
-          onDelete={onDelete}
-        />
+        <TaskContext.Provider value={{ onDelete, onCompleted }}>
+          <TodoTaskList
+            todoList={
+              status !== "all"
+                ? status === "active"
+                  ? todoList.filter((task) => task.completed === false)
+                  : todoList.filter((task) => task.completed === true)
+                : todoList
+            }
+          />
+        </TaskContext.Provider>
       </form>
     </div>
   );

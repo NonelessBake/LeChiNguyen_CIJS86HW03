@@ -2,7 +2,7 @@ import TodoTask from "./TodoTask";
 
 function TodoTaskList(newProps) {
   const { todoList, onCompleted, onDelete } = newProps;
-
+  //
   return (
     <ul className="show-tasks">
       {todoList.map((task) => (

@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { TaskContext } from "./TodoApp";
 function TodoTask(newProps) {
-  const { task, onCompleted, onDelete } = newProps;
+  const { task } = newProps;
   const { id, taskName, completed } = task;
+  const { onDelete, onCompleted } = useContext(TaskContext);
   return (
     <>
       <li className="task">

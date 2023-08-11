@@ -1,5 +1,3 @@
-import { Status } from "./TodoApp";
-
 function TodoActionTask(newProps) {
   const { onAddNewTask, onChangeStatus } = newProps;
   return (
@@ -9,7 +7,7 @@ function TodoActionTask(newProps) {
           id="show-all"
           className="select-status"
           onClick={() => {
-            onChangeStatus(Status.All);
+            onChangeStatus("all");
           }}
         >
           All
@@ -17,21 +15,25 @@ function TodoActionTask(newProps) {
         <li
           id="show-active"
           className="select-status"
-          onClick={() => onChangeStatus(Status.Active)}
+          onClick={() => {
+            onChangeStatus("active");
+          }}
         >
           Active
         </li>
         <li
           id="show-completed"
           className="select-status"
-          onClick={() => onChangeStatus(Status.Completed)}
+          onClick={() => {
+            onChangeStatus("completed");
+          }}
         >
           Completed
         </li>
       </ul>
-      <div className="add-task" onClick={onAddNewTask}>
+      <button type="button" className="add-task" onClick={onAddNewTask}>
         Add
-      </div>
+      </button>
     </div>
   );
 }

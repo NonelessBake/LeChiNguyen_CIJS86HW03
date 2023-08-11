@@ -1,16 +1,16 @@
 import TodoTask from "./TodoTask";
 
 function TodoTaskList(newProps) {
-  const { todos, onCompleted, onDelete } = newProps;
-
+  const { todoList, onCompleted, onDelete } = newProps;
+  console.log(todoList);
   return (
     <ul className="show-tasks">
-      {todos.map((todo, index) => (
+      {todoList.map((task) => (
         <TodoTask
-          key={index}
-          todo={todo}
-          onDelete={onDelete}
+          key={task.id}
+          task={task}
           onCompleted={onCompleted}
+          onDelete={onDelete}
         />
       ))}
     </ul>

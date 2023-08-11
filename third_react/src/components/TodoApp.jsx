@@ -4,85 +4,72 @@ import TodoActionTask from "./TodoActionTask";
 import TodoInputTask from "./TodoInputTask";
 import TodoTaskList from "./TodoTaskList";
 
-export const Status = {
-  All: "all",
-  Active: "active",
-  Completed: "completed",
-};
-
 function TodoApp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
+  const [todoList, setTodoList] = useState([
+    { id: crypto.randomUUID(), taskName: "JavaScript", completed: false },
+    { id: crypto.randomUUID(), taskName: "Github", completed: false },
+    { id: crypto.randomUUID(), taskName: "DOM", completed: false },
+    { id: crypto.randomUUID(), taskName: "Loop", completed: true },
+  ]);
   const [inputTask, setInputTask] = useState("");
-  const [status, setStatus] = useState(Status.All);
   const onChangeHandler = (e) => {
     setInputTask(e.target.value);
   };
 
-  const [todos, setTodos] = useState([
-    { id: Math.random(), taskName: "Git Bash", status: Status.Active },
-    { id: Math.random(), taskName: "CSS", status: Status.Active },
-    { id: Math.random(), taskName: "Java", status: Status.Active },
-    { id: Math.random(), taskName: "TypeScript", status: Status.Active },
-    { id: Math.random(), taskName: "Python", status: Status.Active },
-  ]);
-
   const onAddNewTask = () => {
-    if (inputTask === "") alert("Task is empty");
-    else {
+    if (inputTask === "") {
+      alert("Task cannot be empty");
+    } else {
       let checked = true;
-      todos.forEach((item) => {
-        if (item.taskName === inputTask) {
-          checked = false;
-        }
+      todoList.forEach((item) => {
+        if (inputTask === item.taskName) checked = false;
       });
-      if (!checked) {
-        alert("Task already exists");
-        setInputTask("");
-        return;
-      }
-      setTodos((prev) => [
-        ...prev,
-        { id: Math.random(), taskName: inputTask, status: Status.Active },
-      ]);
-      setInputTask("");
+      if (checked === false) alert("Task is already existed");
+      else
+        setTodoList((prev) => [
+          ...prev,
+          { id: crypto.randomUUID(), taskName: inputTask, completed: false },
+        ]);
     }
+    setInputTask("");
   };
 
-  const onCompleted = (id) => {
-    let index = todos.findIndex((item) => item.id === id);
-    let temp = [...todos];
-    temp[index].status =
-      temp[index].status === Status.Completed
-        ? Status.Active
-        : Status.Completed;
-    setTodos(temp);
+  const onCompleted = (id, completed) => {
+    setTodoList((prev) =>
+      prev.map((task) => {
+        if (id === task.id) return { ...task, completed };
+        return task;
+      })
+    );
   };
 
-  const onDelete = (id) => {
-    setTodos((prev) => prev.filter((item) => item.id !== id));
-  };
-
+  const [status, setStatus] = useState("all");
   const onChangeStatus = (status) => {
     setStatus(status);
   };
 
+  const onDelete = (id) => {
+    setTodoList((prev) => prev.filter((item) => item.id !== id));
+  };
   return (
     <div className="form-container">
-      <form id="to-do-form" onSubmit={handleSubmit}>
+      <form id="to-do-form">
         <h2 id="tittle">TO DO LIST</h2>
-        <TodoInputTask value={inputTask} onChangeHandler={onChangeHandler} />
+        <TodoInputTask
+          inputTask={inputTask}
+          onChangeHandler={onChangeHandler}
+        />
         <TodoActionTask
           onAddNewTask={onAddNewTask}
           onChangeStatus={onChangeStatus}
         />
         <TodoTaskList
-          todos={
-            status !== Status.All
-              ? todos.filter((item) => item.status === status)
-              : todos
+          todoList={
+            status !== "all"
+              ? status === "active"
+                ? todoList.filter((task) => task.completed === false)
+                : todoList.filter((task) => task.completed === true)
+              : todoList
           }
           onCompleted={onCompleted}
           onDelete={onDelete}

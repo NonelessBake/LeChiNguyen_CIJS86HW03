@@ -1,10 +1,10 @@
 function TodoInputTask(newProps) {
-  const { onChangeHandler, value } = newProps;
+  const { inputTask, onChangeHandler } = newProps;
   return (
     <div className="enter-task-container">
       <input
+        value={inputTask}
         type="text"
-        value={value}
         placeholder="Enter new task"
         id="enter-task"
         onChange={onChangeHandler}

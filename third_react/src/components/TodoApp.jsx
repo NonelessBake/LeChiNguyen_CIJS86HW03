@@ -11,6 +11,7 @@ function TodoApp() {
     { id: crypto.randomUUID(), taskName: "DOM", completed: false },
     { id: crypto.randomUUID(), taskName: "Loop", completed: true },
   ]);
+
   const [inputTask, setInputTask] = useState("");
   const onChangeHandler = (e) => {
     setInputTask(e.target.value);

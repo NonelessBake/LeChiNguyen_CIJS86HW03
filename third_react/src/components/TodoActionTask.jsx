@@ -1,10 +1,9 @@
-import { useTodo, useTodoUpdate } from "./TodoContext";
+import { useContext } from "react";
+import { TodoContext, TodoUpdateContext } from "./TodoContext";
 
 function TodoActionTask() {
-  const todo = useTodo();
-  const todoUpdate = useTodoUpdate();
-  const { status } = todo;
-  const { onAddNewTask, onChangeStatus } = todoUpdate;
+  const { status } = useContext(TodoContext);
+  const { onAddNewTask, onChangeStatus } = useContext(TodoUpdateContext);
 
   return (
     <div id="task-actions-container">

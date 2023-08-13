@@ -1,8 +1,9 @@
-import { useTodo, useTodoUpdate } from "./TodoContext";
+import { useContext } from "react";
+import { TodoContext, TodoUpdateContext } from "./TodoContext";
 
 function TodoInputTask() {
-  const { inputTask } = useTodo();
-  const { onChangeHandler } = useTodoUpdate();
+  const { inputTask } = useContext(TodoContext);
+  const { onChangeHandler } = useContext(TodoUpdateContext);
   return (
     <div className="enter-task-container">
       <input

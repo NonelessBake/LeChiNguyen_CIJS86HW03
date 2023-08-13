@@ -1,9 +1,10 @@
-import { useTodoUpdate } from "./TodoContext";
+import { useContext } from "react";
+import { TodoUpdateContext } from "./TodoContext";
 
 function TodoTask(newProps) {
   const { task } = newProps;
   const { id, taskName, completed } = task;
-  const { onDelete, onCompleted } = useTodoUpdate();
+  const { onDelete, onCompleted } = useContext(TodoUpdateContext);
   return (
     <>
       <li className="task">

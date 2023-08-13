@@ -1,10 +1,8 @@
-import { useState, useContext, createContext } from "react";
+import { useState, createContext } from "react";
+import PropTypes from "prop-types";
 
-const TodoContext = createContext();
-const TodoUpdateContext = createContext();
-
-export const useTodo = () => useContext(TodoContext);
-export const useTodoUpdate = () => useContext(TodoUpdateContext);
+export const TodoContext = createContext();
+export const TodoUpdateContext = createContext();
 
 export const TodoProvider = ({ children }) => {
   const [todoList, setTodoList] = useState([
@@ -25,9 +23,10 @@ export const TodoProvider = ({ children }) => {
     } else {
       let checked = true;
       todoList.forEach((item) => {
-        if (inputTask === item.taskName) checked = false;
+        if (inputTask.toLowerCase() === item.taskName.toLowerCase())
+          checked = false;
       });
-      if (checked === false) alert("Task is already existed");
+      if (checked === false) alert("Task already exists");
       else
         setTodoList((prev) => [
           ...prev,
@@ -78,3 +77,4 @@ export const TodoProvider = ({ children }) => {
     </TodoContext.Provider>
   );
 };
+TodoProvider.propTypes = { children: PropTypes.node };

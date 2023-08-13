@@ -1,10 +1,12 @@
 import TodoTask from "./TodoTask";
+import { useTodo } from "./TodoContext";
 
-function TodoTaskList(newProps) {
-  const { todoList } = newProps;
+function TodoTaskList() {
+  const { newTodoList } = useTodo();
+
   return (
     <ul className="show-tasks">
-      {todoList.map((task) => (
+      {newTodoList.map((task) => (
         <TodoTask key={task.id} task={task} />
       ))}
     </ul>

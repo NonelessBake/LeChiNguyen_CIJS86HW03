@@ -1,5 +1,11 @@
-function TodoActionTask(newProps) {
-  const { onAddNewTask, onChangeStatus, status } = newProps;
+import { useTodo, useTodoUpdate } from "./TodoContext";
+
+function TodoActionTask() {
+  const todo = useTodo();
+  const todoUpdate = useTodoUpdate();
+  const { status } = todo;
+  const { onAddNewTask, onChangeStatus } = todoUpdate;
+
   return (
     <div id="task-actions-container">
       <ul className="task-actions">

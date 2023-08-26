@@ -45,7 +45,8 @@ const TodoContextProvider = ({ children }) => {
   const onDeleteTask = (id) => {
     setTodoList((prev) => prev.filter((item) => item.id !== id));
   };
-  const onDeleteAll = () => setTodoList([]);
+  const onDeleteAll = () =>
+    setTodoList((prev) => prev.filter((item) => item.completed !== true));
 
   const newTodoList =
     status !== "all"

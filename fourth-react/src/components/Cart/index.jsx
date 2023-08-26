@@ -1,9 +1,11 @@
 import "./Cart.css";
 function Cart(newProps) {
-  const { cartItems, quantity } = newProps;
+  const { cartItems, quantity, totalPrice, clearCart } = newProps;
   console.log(cartItems);
   return (
     <div className="cart-wrap">
+      <div>{totalPrice}</div>
+      <button onClick={clearCart}>Clear cart</button>
       <div className="cart-icon-wrap">
         <svg
           xmlns="http://www.w3.org/2000/svg"

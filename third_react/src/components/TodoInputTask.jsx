@@ -11,7 +11,7 @@ function TodoInputTask() {
         type="text"
         placeholder="Enter new task"
         id="enter-task"
-        onChange={onChangeHandler}
+        onChange={(e) => onChangeHandler(e)}
       />
     </div>
   );

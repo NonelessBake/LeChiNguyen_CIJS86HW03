@@ -1,4 +1,4 @@
-import TodoApp from "./components/TodoApp";
+import TodoApp from "./remakeComponents/TodoApp";
 
 function App() {
   return (

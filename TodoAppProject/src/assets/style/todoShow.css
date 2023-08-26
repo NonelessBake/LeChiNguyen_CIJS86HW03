@@ -1,0 +1,25 @@
+.show-status {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 5px;
+}
+.show-status button {
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+.show-status button:hover {
+  color: rgb(233, 0, 0);
+}
+.all,
+.active,
+.completed {
+  color: rgb(233, 0, 0);
+  border-bottom: 2px solid blue;
+}

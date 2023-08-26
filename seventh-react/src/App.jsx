@@ -18,18 +18,17 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:productId" element={<ProductDetail />} />
-            <Route path="/invoices" element={<Invoices />} />
-            <Route path="/invoices/:invoiceId" element={<InvoiceDetail />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/about" element={<About />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:productId" element={<ProductDetail />} />
+          <Route path="/invoices" element={<Invoices />} />
+          <Route path="/invoices/:invoiceId" element={<InvoiceDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about" element={<About />} />
           <Route path="/auth" element={<Auth />}>
-            <Route path="/auth/login" element={<Login />} />
-            <Route path="/auth/signup" element={<Signup />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
           </Route>
         </Routes>
       </Router>

@@ -10,11 +10,7 @@ function TodoActionTask() {
       <ul className="task-actions">
         <li
           id="show-all"
-          className="select-status"
-          style={{
-            backgroundColor: status === "all" && "white",
-            color: status === "all" && "black",
-          }}
+          className={`select-status ${status === "all" && "all"}`}
           onClick={() => {
             onChangeStatus("all");
           }}
@@ -23,11 +19,7 @@ function TodoActionTask() {
         </li>
         <li
           id="show-active"
-          className="select-status"
-          style={{
-            backgroundColor: status === "active" && "white",
-            color: status === "active" && "black",
-          }}
+          className={`select-status ${status === "active" && "active"}`}
           onClick={() => {
             onChangeStatus("active");
           }}
@@ -36,11 +28,7 @@ function TodoActionTask() {
         </li>
         <li
           id="show-completed"
-          className="select-status"
-          style={{
-            backgroundColor: status === "completed" && "white",
-            color: status === "completed" && "black",
-          }}
+          className={`select-status ${status === "completed" && "completed"}`}
           onClick={() => {
             onChangeStatus("completed");
           }}

@@ -1,0 +1,35 @@
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.check-box {
+  width: 20px;
+  height: 20px;
+}
+.delete-task {
+  border: none;
+  background-color: none;
+}
+.uil-trash {
+  font-size: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.uil-trash:hover {
+  color: rgb(248, 14, 6);
+}
+.name-task {
+  font-size: 20px;
+}
+.task-completed {
+  text-decoration: line-through;
+}

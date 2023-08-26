@@ -1,0 +1,28 @@
+.todo-input-container {
+  margin-bottom: 30px;
+}
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+.todo-input input {
+  padding: 5px 10px;
+  flex: 5;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+.todo-input button {
+  cursor: pointer;
+  padding: 5px;
+  flex: 1;
+  border: none;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.todo-input button:hover {
+  color: red;
+  background-color: yellow;
+}

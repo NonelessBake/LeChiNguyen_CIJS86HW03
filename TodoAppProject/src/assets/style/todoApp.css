@@ -1,0 +1,19 @@
+.todo-container {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+  margin-top: 50px;
+}
+.delete-all-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.delete-all-btn button {
+  padding: 10px 9px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -3,7 +3,12 @@ import { createContext, useState } from "react";
 export const TodoContext = createContext();
 export const TodoContextUpdate = createContext();
 const TodoContextProvider = ({ children }) => {
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState([
+    { id: crypto.randomUUID(), taskName: "Push Project", completed: false },
+    { id: crypto.randomUUID(), taskName: "Learn Script", completed: false },
+    { id: crypto.randomUUID(), taskName: "Contact Customer", completed: false },
+    { id: crypto.randomUUID(), taskName: "Travel", completed: true },
+  ]);
   const [inputTask, setInputTask] = useState("");
 
   const handleSubmit = (e) => e.preventDefault();

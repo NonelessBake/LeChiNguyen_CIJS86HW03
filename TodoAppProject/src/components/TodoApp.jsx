@@ -5,7 +5,7 @@ import "../assets/style/todoApp.css";
 import { TodoContext, TodoContextUpdate } from "../context/TodoContextProvider";
 import { useContext } from "react";
 const TodoApp = () => {
-  const { newTodoList } = useContext(TodoContext);
+  const { newTodoList, status } = useContext(TodoContext);
   const { onDeleteAll } = useContext(TodoContextUpdate);
   return (
     <div className="todo-container">
@@ -13,7 +13,7 @@ const TodoApp = () => {
       <TodoShow />
       <TodoInput />
       <TodoList />
-      {newTodoList.length > 0 ? (
+      {newTodoList.length > 0 && status === "completed" ? (
         <div className="delete-all-btn">
           <button onClick={onDeleteAll}>Delete All</button>
         </div>

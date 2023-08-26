@@ -13,7 +13,7 @@ const TodoApp = () => {
       <TodoShow />
       <TodoInput />
       <TodoList />
-      {newTodoList.length > 0 ? (
+      {newTodoList.length > 0 && status !== "active" ? (
         <div className="delete-all-btn">
           <button onClick={onDeleteAll}>Delete All</button>
         </div>

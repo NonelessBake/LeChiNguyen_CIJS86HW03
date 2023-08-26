@@ -2,9 +2,10 @@ import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import TodoShow from "./TodoShow";
 import "../assets/style/todoApp.css";
-import { TodoContextUpdate } from "../context/TodoContextProvider";
+import { TodoContext, TodoContextUpdate } from "../context/TodoContextProvider";
 import { useContext } from "react";
 const TodoApp = () => {
+  const { newTodoList } = useContext(TodoContext);
   const { onDeleteAll } = useContext(TodoContextUpdate);
   return (
     <div className="todo-container">
@@ -12,9 +13,11 @@ const TodoApp = () => {
       <TodoShow />
       <TodoInput />
       <TodoList />
-      <div className="delete-all-btn">
-        <button onClick={onDeleteAll}>Delete All</button>
-      </div>
+      {newTodoList.length > 0 ? (
+        <div className="delete-all-btn">
+          <button onClick={onDeleteAll}>Delete All</button>
+        </div>
+      ) : null}
     </div>
   );
 };

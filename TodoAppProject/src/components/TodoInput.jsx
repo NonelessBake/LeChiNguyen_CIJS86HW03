@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { TodoContext, TodoContextUpdate } from "../context/TodoContextProvider";
-import "../assets/style/todoInput.css";
+import "../../assets/style/todoInput.css";
 const TodoInput = () => {
   const { inputTask } = useContext(TodoContext);
   const { handleSubmit, handleChange, onAddNewTask } =

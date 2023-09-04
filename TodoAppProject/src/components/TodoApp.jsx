@@ -1,7 +1,7 @@
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import TodoShow from "./TodoShow";
-import "../assets/style/todoApp.css";
+import "../../assets/style/todoApp.css";
 import { TodoContext, TodoContextUpdate } from "../context/TodoContextProvider";
 import { useContext } from "react";
 const TodoApp = () => {

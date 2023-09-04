@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "../assets/style/todoShow.css";
+import "../../assets/style/todoShow.css";
 import { TodoContext, TodoContextUpdate } from "../context/TodoContextProvider";
 
 const TodoShow = () => {

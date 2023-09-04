@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { TodoContext, TodoContextUpdate } from "../context/TodoContextProvider";
-import "../assets/style/todoTask.css";
+import "../../assets/style/todoTask.css";
 const TodoTask = (newProps) => {
   const { task } = newProps;
   const { id, taskName, completed } = task;
